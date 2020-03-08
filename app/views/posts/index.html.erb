@@ -2,6 +2,18 @@
 <section class="section">
     <div class="container">
     <h2 class="title">Blog index</h2>
+
+    <% if @posts.blank? %>
+        <article class="message is-warning">
+        <div class="message-header">
+            <p>Warning</p>
+            <button class="delete" aria-label="delete"></button>
+        </div>
+        <div class="message-body">
+            Sorry there are any posts unitil right now
+        </div>
+        </article>      
+    <% end %>
     <% @posts.each do |post| %>
         <div class="card">
             <div class="card-content">

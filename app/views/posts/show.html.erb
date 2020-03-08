@@ -10,11 +10,12 @@
         <div class="navbar-end">
             <!-- navbar items -->
             <p class="control navbar-item">
-                <button class="button is-warning">Edit</button>
+                <%= link_to 'Edit', edit_post_path(@post) ,class:"button is-warning" %>
             </p>
 
             <p class="control navbar-item">
-                <button class="button is-danger">Delete</button>
+                
+                 <%= link_to 'Delete', post_path(@post) ,class:"button is-danger",method: :delete,data:{confirm:"Are you sure ?"} %>
             </p>
         </div>
         </div>
